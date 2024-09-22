@@ -6,6 +6,7 @@
 \usepackage{hyperref}
 \usepackage{graphicx}
 \usepackage{amsmath}
+\usepackage{listings}
 
 % Title Page
 \title{
@@ -59,7 +60,7 @@
     \hline
      3&  MY CV & 3/9/24 & --&\\
     \hline
-    4&   -- &-- &--&--\\
+    4&   Calculator using c & 13/08/24 & SOUMYAJIT KHAN &\\
     5&--&--&--&--\\
     6&--&--&--&--\\
      \end{tabular}
@@ -264,10 +265,46 @@ I am immensely grateful to my teacher, Ayan Sir, for assigning this remarkable g
 \newpage
 \section{MY FIRST LATEX DOCUMENT}
 \subsection*{Date: 30-08-2024}
-\newpage
+
+
+\titleformat{\section}{\large\bfseries}{}{0em}{}[\titlerule]
+
+
+\begin{center}
+    {\LARGE Soumyajit Khan} \\[0.5em]
+
+\begin{center}
+\includegraphics[width=0.5\textwidth]{WhatsApp Image 2024-08-07 at 22.06.13_b3715a97.jpg}
+\end{center}
+    Address -38/c mondal street kolkata- 700006 \\[0.5em]
+    City- Kolkata, State - West Bengal, Zip - 700006 \\[0.5em]
+    Phone: (+91) 8100280270 \\[0.5em]
+    Email: \href{mailto:soumyajit@gmail.com}{soumyajitninja@gmail.com} \\[0.5em]
+    GitHub: \href{https://github.com/SoumyajitKhan07}{//github.com/SoumyajitKhan07}
+\end{center}
+
+\section{Bio}
+Myself Soumyajit khan,i was born in kolkata near jorabagan on 4th july 2005, In my family i have my big brother and my parents.
+
+\section{Education}
+\begin{itemize}
+\item Degree - Bachelor of Computer Application (BCA)
+\item University - Maulana Abul Kalam Azad University of Technology (WB), Nadia, West Bengal, 741249
+\item Year - 2023 to 2027 
+\end{itemize}
+
+\section{Relevant coursework} 
+Course 1 -C Programming\\
+Course 2 -Python\\
+
+\section{Experience}
+\begin{itemize}
+\item \textbf {Job - None}
+\end{itemize}
+
 % Lab Notebook Entries
-\section{Lab Notebook Entry by Member 3}
-\subsection*{Date: 08-09-2024}
+\section{Calculator using c}
+\subsection*{Date: 13-08-2024}
 
 \begin{flushright}
 \textbf{Name:} SOUMYAJIT KHAN \\
@@ -280,6 +317,48 @@ I am immensely grateful to my teacher, Ayan Sir, for assigning this remarkable g
 \end{center}
 
 I am deeply thankful to my teacher, Ayan Sir, for giving us this exceptional group project. It has been an incredible opportunity for hands-on learning and skill development. I also want to express my gratitude for the consistent support and collaborative effort throughout this journey. Furthermore, I've gained valuable experience in troubleshooting and refining my code to improve its functionality.
+
+\begin{lstlisting}[language=C, caption={Calculator Program in C}, label={lst:calculator}]
+#include <stdio.h>
+int main() {
+    char operator;
+    double num1, num2, result;
+    // Displaying options to the user
+    printf("Enter an operator (+, -, *, /): ");
+    scanf("%c", &operator);
+    // Taking input for the two operands
+    printf("Enter two operands: ");
+    scanf("%lf %lf", &num1, &num2);
+    // Performing the calculation based on the operator
+    switch (operator) {
+        case '+':
+            result = num1 + num2;
+            printf("%.2lf + %.2lf = %.2lf\n", num1, num2, result);
+            break;
+        case '-':
+            result = num1 - num2;
+            printf("%.2lf - %.2lf = %.2lf\n", num1, num2, result);
+            break;
+        case '*':
+            result = num1 * num2;
+            printf("%.2lf * %.2lf = %.2lf\n", num1, num2, result);
+            break;
+        case '/':
+            if (num2 != 0) {
+                result = num1 / num2;
+                printf("%.2lf / %.2lf = %.2lf\n", num1, num2, result);
+            } else {
+                printf("Error! Division by zero.");
+            }
+            break;
+        default:
+            printf("Error! Operator is not correct");
+            break;
+    }
+    return 0;
+}
+\end{lstlisting}
+
 
 \newpage
 \section{MY FIRST LATEX DOCUMENT}
